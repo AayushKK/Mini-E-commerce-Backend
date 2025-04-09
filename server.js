@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI).then((val) => {
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'http://localhost:5173', // Your frontend URL
+  origin: ['http://localhost:5173', 'https://e-commerce-front-sage.vercel.app'],
   credentials: true
 }));
 
