@@ -25,7 +25,7 @@ jobs:
           until [ $n -ge $max_retries ]
           do
             # -f: fail on non-2xx/3xx, -sS silent but show errors, -m timeout seconds
-            curl -fsS -m 10 "$PING_URL" && { echo "Ping successful"; exit 0; }
+            curl -fsS -m 30 "$PING_URL" && { echo "Ping successful"; exit 0; }
             n=$((n+1))
             echo "Attempt $n failed — retrying in 5s..."
             sleep 5
